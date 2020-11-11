@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require_relative 'sudoku'
-using ArrayExtensions
+# using ArrayExtensions
 
 class SudokuTest < Minitest::Test
   def test_it_finds_rows
@@ -17,7 +17,7 @@ class SudokuTest < Minitest::Test
   end
 
   def test_it_finds_columns
-    skip
+    # skip
     grid = [[5, 3, 4, 6, 7, 8, 9, 1, 2],
             [6, 7, 2, 1, 9, 5, 3, 4, 8],
             [1, 9, 8, 3, 4, 2, 5, 6, 7],
