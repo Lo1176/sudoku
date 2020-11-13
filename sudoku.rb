@@ -9,11 +9,13 @@ class Sudoku
   end
 
   def rows
-    grid.each { |row| row.size == row.uniq.size }
+    # grid.each { |row| row.size == row.uniq.size }
+    grid
   end
 
   def columns
-    grid.transpose.each { |row| row.size == row.uniq.size }
+    # grid.transpose.each { |row| row.size == row.uniq.size }
+    grid.transpose
   end
 
   def regions
@@ -36,7 +38,8 @@ class Sudoku
   def valid?
     # check if region, row and colomn are valid?
     # .sort == (1..9).to_a
-    self.sorty == (1..9).to_a
+    ok = (1..9).to_a
+    true if rows.each { |e| e.sort == ok } || columns.each { |e| e.sort == ok } || regions.each { |e| e.sort == ok }
   end
 
   def self.done_or_not(grid)
