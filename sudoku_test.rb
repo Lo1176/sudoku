@@ -140,7 +140,7 @@ class SudokuTest < Minitest::Test
   end
 
   def test_it_is_invalid_grid
-    skip
+    # skip
     grid = [[5, 3, 4, 6, 7, 8, 9, 1, 2],
             [6, 7, 2, 1, 9, 0, 3, 4, 9],
             [1, 0, 0, 3, 4, 2, 5, 6, 0],
