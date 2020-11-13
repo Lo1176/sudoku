@@ -35,8 +35,8 @@ class Sudoku
 
   def valid?
     # check if region, row and colomn are valid?
-    (1..9).to_a
-
+    # .sort == (1..9).to_a
+    self.sorty == (1..9).to_a
   end
 
   def self.done_or_not(grid)
