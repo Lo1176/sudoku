@@ -17,18 +17,11 @@ class Sudoku
   end
 
   def regions
-    region_1r_1c = grid.map { |e| e.first(3) }.take(3).flatten
-    region_1r_3c = grid.map { |e| e.last(3) }.take(3).flatten
-    region_1r_2c = grid.reject { region_1r_1c && region_1r_3c }
+    region_1r_1c = grid.map { |ary| ary.first(3) }.take(3).flatten
+    region_1r_3c = grid.map { |ary| ary.last(3) }.take(3).flatten
+    region_1r_2c = grid.map { |ary| ary.first(6).last(3) }.take(3).flattent
   end
 
   def region_center
-    i = 3
-    region_1r_2c = []
-    until i == 5
-      region_1r_2c << grid.map { |e| e }
-      i += 1
-
-    end
   end
 end
