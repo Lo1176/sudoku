@@ -69,7 +69,7 @@ class SudokuTest < Minitest::Test
   end
 
   def test_it_finds_the_forth_region
-    skip
+    # skip
     grid = [[5, 3, 4, 6, 7, 8, 9, 1, 2],
             [6, 7, 2, 1, 9, 5, 3, 4, 8],
             [1, 9, 8, 3, 4, 2, 5, 6, 7],
@@ -84,7 +84,7 @@ class SudokuTest < Minitest::Test
   end
 
   def test_forth_row_is_valid
-    skip
+    # skip
     grid = [[5, 3, 4, 6, 7, 8, 9, 1, 2],
             [6, 7, 2, 1, 9, 5, 3, 4, 8],
             [1, 9, 8, 3, 4, 2, 5, 6, 7],
@@ -98,7 +98,7 @@ class SudokuTest < Minitest::Test
   end
 
   def test_forth_col_is_valid
-    skip
+    # skip
     grid = [[5, 3, 4, 6, 7, 8, 9, 1, 2],
             [6, 7, 2, 1, 9, 5, 3, 4, 8],
             [1, 9, 8, 3, 4, 2, 5, 6, 7],
@@ -112,7 +112,7 @@ class SudokuTest < Minitest::Test
   end
 
   def test_third_region_is_valid
-    skip
+    # skip
     grid = [[5, 3, 4, 6, 7, 8, 9, 1, 2],
             [6, 7, 2, 1, 9, 5, 3, 4, 8],
             [1, 9, 8, 3, 4, 2, 5, 6, 7],
@@ -126,7 +126,7 @@ class SudokuTest < Minitest::Test
   end
 
   def test_it_is_valid_grid
-    skip
+    # skip
     grid = [[5, 3, 4, 6, 7, 8, 9, 1, 2],
             [6, 7, 2, 1, 9, 5, 3, 4, 8],
             [1, 9, 8, 3, 4, 2, 5, 6, 7],

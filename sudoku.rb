@@ -1,4 +1,4 @@
-# using ArrayExtensions
+# frozen_string_literal: true
 
 # Sudoku class with methods
 class Sudoku
@@ -18,21 +18,31 @@ class Sudoku
 
   def regions
     # regions on the first line
-    region_1r_1c = grid.map { |ary| ary.first(3) }.first(3).flatten
-    region_1r_2c = grid.map { |ary| ary.first(6).last(3) }.first(3).flatten
-    region_1r_3c = grid.map { |ary| ary.last(3) }.first(3).flatten
+    r_1r_1c = grid.map { |ary| ary.first(3) }.first(3).flatten
+    r_1r_2c = grid.map { |ary| ary.first(6).last(3) }.first(3).flatten
+    r_1r_3c = grid.map { |ary| ary.last(3) }.first(3).flatten
     # regions on the middle line
     # start with the forth_region
-    region_2r_1c = grid.map { |ary| ary.first(3) }.first(6).last(3).flatten
-    region_2r_2c = grid.map { |ary| ary.first(6).last(3) }.first(6).last(3).flatten
-    region_2r_3c = grid.map { |ary| ary.last(3) }.first(6).last(3).flatten
+    r_2r_1c = grid.map { |ary| ary.first(3) }.first(6).last(3).flatten
+    r_2r_2c = grid.map { |ary| ary.first(6).last(3) }.first(6).last(3).flatten
+    r_2r_3c = grid.map { |ary| ary.last(3) }.first(6).last(3).flatten
     # regions on the last line
-    region_3r_1c = grid.map { |ary| ary.first(3) }.last(3).flatten
-    region_3r_2c = grid.map { |ary| ary.first(6).last(3) }.last(3).flatten
-    region_3r_3c = grid.map { |ary| ary.last(3) }.last(3).flatten
-    regions = [region_1r_1c, region_1r_2c, region_1r_3c, region_2r_1c, region_2r_2c, region_2r_3c, region_3r_1c, region_3r_2c, region_3r_3c]
+    r_3r_1c = grid.map { |ary| ary.first(3) }.last(3).flatten
+    r_3r_2c = grid.map { |ary| ary.first(6).last(3) }.last(3).flatten
+    r_3r_3c = grid.map { |ary| ary.last(3) }.last(3).flatten
+    [r_1r_1c, r_1r_2c, r_1r_3c, r_2r_1c, r_2r_2c, r_2r_3c, r_3r_1c, r_3r_2c, r_3r_3c]
   end
 
-  def region_center
+  def valid?
+    # check if region, row and colomn are valid?
+    (1..9).to_a
+
+  end
+
+  def self.done_or_not(grid)
+    # check if all regions are valid?
+    # if true puts:
+    # 'Finished!'
+
   end
 end
