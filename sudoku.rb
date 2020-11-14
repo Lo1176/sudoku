@@ -9,11 +9,12 @@ class Sudoku
   end
 
   def rows
-    grid.each { |row| row.size == row.uniq.size }
+    grid
   end
 
   def columns
-    grid.transpose.each { |row| row.size == row.uniq.size }
+    grid.transpose
+
   end
 
   def regions
