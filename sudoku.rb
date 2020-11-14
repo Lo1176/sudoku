@@ -38,12 +38,12 @@ class Sudoku
   def self.done_or_not(grid)
     # check if all regions are valid?
     # if true puts: truthy
-    # if !rows.nil? || !columns.nil? || !regions.nil?
-    if rows.each { |e| e.sort.valid? } || columns.each { |e| e.sort.valid? } || regions.each { |e| e.sort.valid? }
-      'Finished!'
-      # end
-    else
+    if self.rows.include?(0) || self.columns.include?(0) || self.regions.include?(0)
       'Try again!'
+    else
+       if self.rows.each { |e| e.sort == e.valid? } || self.columns.each { |e| e.sort.valid? } || self.regions.each { |e| e.sort.valid? }
+        'Finished!'
+        end
     end
   end
 end
@@ -53,7 +53,8 @@ class Array
   def valid?
     # check if region, row and colomn are valid?
     # .sort == (1..9).to_a
-    (1..9).to_a
+
+    self.sort == (1..9).to_a
     # unless rows.nil? || columns.nil? || regions.nil?
     #   true if rows.each { |e| e.sort == ok } || columns.each { |e| e.sort == ok } || regions.each { |e| e.sort == ok }
     # end

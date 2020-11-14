@@ -79,7 +79,7 @@ class SudokuTest < Minitest::Test
             [9, 6, 1, 5, 3, 7, 2, 8, 4],
             [2, 8, 7, 4, 1, 9, 6, 3, 5],
             [3, 4, 5, 2, 8, 6, 1, 7, 9]]
-    expected = [8, 5, 9, 4, 2, 6,7, 1, 3]
+    expected = [8, 5, 9, 4, 2, 6, 7, 1, 3]
     assert_equal expected, Sudoku.new(grid).regions[3].flatten
   end
 
@@ -222,7 +222,7 @@ class SudokuTest < Minitest::Test
             [7, 1, 3, 9, 2, 4, 8, 5, 6],
             [9, 0, 1, 5, 3, 7, 2, 1, 4],
             [2, 8, 7, 4, 1, 9, 6, 3, 5],
-            [0, 0, 0, 0, 0, 0, 0,0, 45]]
+            [0, 0, 0, 0, 0, 0, 0, 0, 45]]
     assert_equal 'Try again!', Sudoku.done_or_not(grid)
   end
 end
