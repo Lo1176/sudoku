@@ -9,13 +9,11 @@ class Sudoku
   end
 
   def rows
-    # grid.each { |row| row.size == row.uniq.size }
-    grid
+    grid.each { |row| row.size == row.uniq.size }
   end
 
   def columns
-    # grid.transpose.each { |row| row.size == row.uniq.size }
-    grid.transpose
+    grid.transpose.each { |row| row.size == row.uniq.size }
   end
 
   def regions
@@ -35,28 +33,16 @@ class Sudoku
     [r_1r_1c, r_1r_2c, r_1r_3c, r_2r_1c, r_2r_2c, r_2r_3c, r_3r_1c, r_3r_2c, r_3r_3c]
   end
 
-  def self.done_or_not(grid)
-    # check if all regions are valid?
-    # if true puts: truthy
-    if self.rows.include?(0) || self.columns.include?(0) || self.regions.include?(0)
-      'Try again!'
-    else
-       if self.rows.each { |e| e.sort == e.valid? } || self.columns.each { |e| e.sort.valid? } || self.regions.each { |e| e.sort.valid? }
-        'Finished!'
-        end
-    end
-  end
-end
-
-# The Array class for adding a .valid? method ("monkey patching")
-class Array
   def valid?
     # check if region, row and colomn are valid?
-    # .sort == (1..9).to_a
+    (1..9).to_a
 
-    self.sort == (1..9).to_a
-    # unless rows.nil? || columns.nil? || regions.nil?
-    #   true if rows.each { |e| e.sort == ok } || columns.each { |e| e.sort == ok } || regions.each { |e| e.sort == ok }
-    # end
+  end
+
+  def self.done_or_not(grid)
+    # check if all regions are valid?
+    # if true puts:
+    # 'Finished!'
+
   end
 end
